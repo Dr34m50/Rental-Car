@@ -10,40 +10,28 @@
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
-      }
-      .car-list {
-        list-style-type: none;
-        padding: 0;
-        margin: 20px;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
-      .car-item {
-        width: 45%;
+      .result-container {
         background-color: #fff;
-        margin-bottom: 20px;
         padding: 20px;
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      .car-name {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
+        text-align: center;
       }
       .car-price {
-        font-size: 16px;
+        font-size: 20px;
+        font-weight: bold;
         color: #007bff;
       }
     </style>
   </head>
   <body>
-    <ul class="car-list">
-      <li class="car-item">
-        <h2>Rental Price: $0</h2>
-        <!-- This will be dynamically replaced -->
-      </li>
-    </ul>
+    <div class="result-container">
+      <h2>Rental Price: <span id="price">$0</span></h2>
+    </div>
   </body>
 </html>

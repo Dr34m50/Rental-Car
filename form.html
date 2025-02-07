@@ -1,4 +1,6 @@
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head> 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -47,7 +49,8 @@
         margin: 20px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        gap: 15px;
+        justify-content: center;
       }
       .car-item {
         width: 45%;
@@ -72,8 +75,8 @@
         color: #007bff;
       }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="formContainer">
       <h1>Car Rental Booking Form</h1>
       <form id="calcForm" method="post" action="http://localhost:3000">
@@ -86,7 +89,7 @@
         <label for="dropoff-date">Dropoff Date:</label>
         <input type="date" id="dropoff-date" name="dropoffdate" required />
         <label for="car-type">Car Type:</label>
-        <select id="car-type" name="type">
+        <select id="car-type" name="type" required>
           <option value="Compact">Compact</option>
           <option value="Electric">Electric</option>
           <option value="Cabrio">Cabrio</option>
@@ -94,19 +97,20 @@
         </select>
         <div class="form-group">
           <label for="age">Driver's age</label>
-          <input type="number" class="form-control" name="age" required />
+          <input type="number" class="form-control" id="age" name="age" required />
         </div>
         <div class="form-group">
           <label for="licenseYears">Driver's License Years</label>
           <input
             type="number"
             class="form-control"
+            id="licenseYears"
             name="licenseYears"
             required
           />
         </div>
-        <button type="submit" class="btn btn-primary">Search</button>
+        <input type="submit" class="btn btn-success" value="Search" />
       </form>
     </div>
-  </body>
+</body>
 </html>
